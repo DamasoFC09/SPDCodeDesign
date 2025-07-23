@@ -15,7 +15,45 @@
         color: #000000;
         margin: 0%;
     }
-    
+
+    body.dark {
+      background-color: #1f1f1f;
+      color: whitesmoke;
+    }
+
+    body.dark h2{
+      color: whitesmoke !important;
+    }
+
+    body.dark #importante {
+      color: whitesmoke !important;
+    }
+
+    body.dark section a{
+      color: rgb(0, 135, 224) !important;
+    }
+
+    body.dark aside a{
+      color: rgb(0, 80, 133) !important;
+    }
+
+    body.dark footer a{
+      color: rgb(110, 197, 255) !important;
+    }
+
+    body.dark button{
+      background-color: antiquewhite;
+      color: #000000;
+    }
+
+    section a{
+      color: rgb(0, 135, 224);
+    }
+
+    aside a{
+      color: rgb(72, 182, 255);
+    }
+
     img {
         display: block;
         width: 100%;
@@ -91,7 +129,11 @@
     }
 
     .clase2 {
-        width: 10%;
+        width: 5%;
+    }
+
+    .clase2 img{
+      border-radius: 3rem;
     }
 
     header {
@@ -149,6 +191,21 @@
 
     aside img {
       margin-left: 10%;
+    }
+
+    aside {
+      font-size: small;
+    }
+
+    aside button {
+      font-size: medium;
+      margin-left: 1rem;
+      border: none;
+      background-color: #000000;
+      color: whitesmoke;
+      padding: .25rem;
+      border-radius: 1rem;
+      cursor: pointer;
     }
 
     @media (max-width: 768px) {
@@ -242,7 +299,7 @@
   <main>
     <section>
      <div class="clase1">
-         <h2>SERVICIOS DE <span style="color: red;">PROGRAMACIÓN</span></h2>
+         <h2>SERVICIOS DE <span style="color: rgb(0, 135, 224);">PROGRAMACIÓN</span></h2>
      </div>
      <p>Nos ofrecemos en el momento que lo necesite, empezamos solamente con lenguaje Python, pero este atento a las actualizaciones que recibirá la página para cuando tengamos nuevos lenguajes disponibles.</p>
      <p>Ofrecemos servicios de programación como:</p>
@@ -255,7 +312,7 @@
 
     <section>
      <div class="clase1">
-         <h2>SERVICIOS DE <span style="color: red;">DISEÑOS</span></h2>
+         <h2>SERVICIOS DE <span style="color: rgb(0, 135, 224);">DISEÑOS</span></h2>
      </div>
      <p>También ofrecemos Diseños como los que verá a continuación:</p>
      <ol>
@@ -269,6 +326,7 @@
      <a href="PÁGINAS.html">PARA MÁS INFORMACION HAGA CLICK AQUÍ</a>
     </section>
     <aside>
+      <button onclick="modooscuro()" id="darkmode" type="button">🌑 / 🌞</button>
       <p id="importante">Muchas gracias a Open AI por la ayuda en la elaboración de la Web<br>A continuación un link que lo dirigirá a la pagina oficial de Open AI</p>
       <p id="importante"><a href="https://openai.com/">Open AI acceso directo</a></p>
       <p id="importante"><a href="https://openai.com/" target="_blank">Open AI se abrirá en otra ventana</a></p>
@@ -286,4 +344,22 @@
      <p>Telegram: <a href="https://te.me/Damaso_Figueredo2" target="_blank">@Damaso_Figueredo2</a></p>
   </footer>
  </body>
+ <script>
+  function modooscuro() {
+    document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("modooscuro", "activado");
+  } else {
+    localStorage.setItem("modooscuro", "desactivado");
+  }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  const modoGuardado = localStorage.getItem("modooscuro");
+  if (modoGuardado === "activado") {
+    document.body.classList.add("dark");
+  }
+});
+ </script>
 </html>
