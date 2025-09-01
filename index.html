@@ -14,7 +14,7 @@
         background-color: #fefefe;
         color: #000000;
         margin: 0%;
-        transition: background-color 0.7s ease, color 0.7s ease;
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     body.dark {
@@ -65,7 +65,9 @@
         text-align: center;
         color: whitesmoke;
         font-size: 40px;
-        padding: 1rem;
+        padding-bottom: 1rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
         font-weight: bolder;
     }
 
@@ -165,7 +167,7 @@
 
     .clase3 img {
         width: 100%;
-        max-height: 500px;
+        max-height: 300px;
         object-fit: cover;
         transform: translate(0px, 0px);
     }
@@ -195,18 +197,14 @@
     }
 
     aside {
-      font-size: small;
+      font-size: 10px;
     }
-
-    aside button {
-      font-size: medium;
-      margin-left: 1rem;
-      border: none;
-      background-color: #000000;
-      color: whitesmoke;
-      padding: .25rem;
-      border-radius: 1rem;
+    
+    .modooscuro img {
+      width: 4%;
       cursor: pointer;
+      margin: 0%;
+      padding: 0%;
     }
 
     @media (max-width: 768px) {
@@ -283,11 +281,12 @@
  <body>
     <header>
         <div class="clase3">
-  <img src="SPDimages/SDP3.jpg" alt="Logo de la Empresa">
+          <img src="SPDimages/SDP3.jpg" alt="Logo de la Empresa">
         </div>
+            <h1>BIENVENIDO A</h1>
   <h1>SPDCodeDesign: Servicio de Programación y Diseño</h1>
   <div class="clase4">
-  <p>Esta es una empresa que ofrece un servicio de programación y diseño al público que lo necesite, esto es actualmente un trabajo escolar pero que no se quedará solamente como un trabajo escolar.<br><br>A continuación recibirá más información.</p>
+  <p>Esta es una empresa que ofrece un servicio de programación y diseño al público que lo necesite, estamos recien empezando como empresa familiar y nos gustaría que nos ayude a seguir progresando.<br><br>A continuación recibirá más información.</p>
   </div>
   <nav>
     <ul>
@@ -315,7 +314,7 @@
      <div class="clase1">
          <h2>SERVICIOS DE <span style="color: rgb(0, 135, 224);">DISEÑOS</span></h2>
      </div>
-     <p>También ofrecemos Diseños como los que verá a continuación:</p>
+     <p>Cabe recalcar que nuestro principal servicio es la programación el diseño ya es un factor secundario entre nosotros <br>También ofrecemos Diseños como los que verá a continuación: </p>
      <ol>
          <li>Logos</li>
          <li>Diseño Web</li>
@@ -327,7 +326,6 @@
      <a href="PÁGINAS.html">PARA MÁS INFORMACION HAGA CLICK AQUÍ</a>
     </section>
     <aside>
-      <button onclick="modooscuro()" id="darkmode" type="button">🌑 / 🌞</button>
       <p id="importante">Muchas gracias a Open AI por la ayuda en la elaboración de la Web<br>A continuación un link que lo dirigirá a la pagina oficial de Open AI</p>
       <p id="importante"><a href="https://openai.com/">Open AI acceso directo</a></p>
       <p id="importante"><a href="https://openai.com/" target="_blank">Open AI se abrirá en otra ventana</a></p>
@@ -364,4 +362,3 @@ window.addEventListener("DOMContentLoaded", () => {
 });
  </script>
 </html>
-
