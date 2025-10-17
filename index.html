@@ -11,10 +11,14 @@
   <style>
     body {
         font-family: 'Roboto Mono', monospace;
-        background-color: #fefefe;
+        background: radial-gradient(circle at top, #000000, #000000);
         color: #000000;
         margin: 0%;
         transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .idk {
+      background: radial-gradient(circle at top left, #004f88, #000);
     }
 
     body.dark {
@@ -76,6 +80,10 @@
         color: #1f1f1f;
         margin: 30px;
         font-weight: bold;
+    }
+
+    section h2{
+      color: rgb(248, 248, 248);
     }
 
     h3 {
@@ -182,14 +190,53 @@
         border-left: 0.5rem solid #004f88;
         border-right: 0.5rem solid #004f88;
         border-radius: 48px;
-        margin-bottom: 1.4rem;
-        margin-top: 1.4rem;
+        margin-bottom: 3rem;
+        margin-top: 3rem;
         margin-left: 3rem;
         margin-right: 3rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.59); /* oscurece la imagen */
+        z-index: 0;
+    }
+
+    section * {
+        position: relative;
+        z-index: 1; /* asegura que el texto esté por encima del fondo */
     }
 
     section a {
       animation: animacion 20s infinite;
+    }
+
+    .section_code{
+        background-image: url('SPDimages/section_code.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: whitesmoke;
+    }
+
+    .section_design {
+        background-image: url('SPDimages/section_design.png');
+        background-size: cover;
+        background-position: right;
+        background-repeat: no-repeat;
+        color: whitesmoke;
+    }
+
+    .section_more_info {
+        background-image: url('SPDimages/section_more_information.webp');
+        background-size: cover;
+        background-position: right;
+        background-repeat: no-repeat;
+        color: whitesmoke;
     }
 
     aside img {
@@ -297,11 +344,11 @@
   </nav>
   </header>
   <main>
-    <section>
+    <section class="section_code">
      <div class="clase1">
          <h2>SERVICIOS DE <span style="color: rgb(0, 135, 224);">PROGRAMACIÓN</span></h2>
      </div>
-     <p>Nos ofrecemos en el momento que lo necesite, empezamos solamente con lenguaje Python, pero este atento a las actualizaciones que recibirá la página para cuando tengamos nuevos lenguajes disponibles.</p>
+     <p>Nos ofrecemos en el momento que lo necesite, empezamos solamente con lenguaje Python, pero esté atento a las actualizaciones que recibirá la página para cuando tengamos nuevos lenguajes disponibles.</p>
      <p>Ofrecemos servicios de programación como:</p>
      <ul>
          <li>Ciberseguridad</li>
@@ -310,7 +357,7 @@
      </ul>
     </section>
 
-    <section>
+    <section class="section_design">
      <div class="clase1">
          <h2>SERVICIOS DE <span style="color: rgb(0, 135, 224);">DISEÑOS</span></h2>
      </div>
@@ -321,7 +368,7 @@
      </ol>
     </section>
 
-    <section>
+    <section class="section_more_info">
      <h2>Más información:</h2>
      <a href="PÁGINAS.html">PARA MÁS INFORMACION HAGA CLICK AQUÍ</a>
     </section>
@@ -333,23 +380,4 @@
      <p>Telegram: <a href="https://te.me/Damaso_Figueredo2" target="_blank">@Damaso_Figueredo2</a></p>
   </footer>
  </body>
- <script>
-  function modooscuro() {
-    document.body.classList.toggle("dark");
-
-  if (document.body.classList.contains("dark")) {
-    localStorage.setItem("modooscuro", "activado");
-  } else {
-    localStorage.setItem("modooscuro", "desactivado");
-  }
-}
-
-window.addEventListener("DOMContentLoaded", () => {
-  const modoGuardado = localStorage.getItem("modooscuro");
-  if (modoGuardado === "activado") {
-    document.body.classList.add("dark");
-  }
-});
- </script>
 </html>
-
