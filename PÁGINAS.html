@@ -6,14 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Sección de paginas de la empresa SPD:Servicio de Programación y Diseño">
         <meta name="author" content="Damaso Figueredo, Fundador">
-        <title>SPD CodeDesign</title>
+        <title>MÁS INFORMACIÓN</title>
         <link rel="icon" href="SPDimages/SPD1PRO.png" type="image/png">
         <style>
             body {
                 font-family: 'Roboto Mono', monospace;
                 color: black;
                 margin: 0%;
-                background-color: #fefefe;
+                background-color: black;
             }
 
             h1 {
@@ -41,14 +41,38 @@
             }
 
             header {
-                background-color: #004f88;
                 margin-top: -1.4rem;
                 color: whitesmoke;
                 padding: 3rem;
             }
 
+            header::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-color: rgba(0, 0, 0, 0.59); /* oscurece la imagen */
+                z-index: 0;
+            }
+
+            header * {
+                position: relative;
+                z-index: 1;
+            }
+
             header p {
                 font-size: 30px;
+            }
+
+            main {
+                position: relative;
+                z-index: 1;
+            }
+
+            .header_image {
+                background-image: url(SPDimages/SDP3.jpg);
+                background-position: center;
+                background-position: cover;
+                background-repeat: no-repeat;
             }
 
             footer {
@@ -57,6 +81,8 @@
                 text-align: center;
                 font-weight: bold;
                 padding: 20px;
+                position: relative;
+                z-index: 1;
             }
 
             footer a {
@@ -165,7 +191,7 @@
         </style>
     </head>    
     <body>
-        <header>
+        <header class="header_image">
             <h1>INFORMACIÓN</h1>
             <p>Acá se encuentran las direcciones de las otras páginas para más información sobre la empresa.</p>
         </header>
@@ -195,4 +221,3 @@
         </footer>
     </body>
 </html>
-
