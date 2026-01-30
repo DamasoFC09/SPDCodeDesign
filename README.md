@@ -2,7 +2,7 @@
 SPD: Servicio de Programación y Diseño. 
 ## Empresa encargada de la Programación Web
 A continuación verá las paginas dentro del archivo:
-- Index
+- Index (Pagina principal)
 - Valores
 - Paginas
 - Misión
