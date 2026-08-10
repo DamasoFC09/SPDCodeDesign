@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Información — SPD CodeDesign</title>
+  <meta name="description" content="Índice de las páginas de SPD: Servicio de Programación y Diseño. Valores, misión y visión de la empresa.">
+  <meta name="author" content="Dámaso Figueredo, Fundador">
+  <meta name="theme-color" content="#0b111f">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Información — SPD CodeDesign">
+  <meta property="og:description" content="Índice de las páginas de la empresa.">
+  <meta property="og:image" content="SPDimages/SDP3.jpg">
+
+  <link rel="icon" href="SPDimages/SPD1PRO.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+    (function () {
+      document.documentElement.classList.add('js');
+      // El modo oscuro es el de la marca. El claro solo aparece si la
+      // persona lo elige con el botón, y entonces se recuerda.
+      var theme = 'dark';
+      try {
+        var saved = localStorage.getItem('spd-theme');
+        if (saved === 'light' || saved === 'dark') theme = saved;
+      } catch (e) {}
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">SPD</span>
+        <span class="brand__word">CodeDesign</span>
+      </a>
+
+      <nav class="nav" data-nav data-open="false" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#tecnologias">Tecnologías</a>
+        <a href="paginas.html" aria-current="page">Nosotros</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+
+      <div class="header-tools">
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Cambiar a modo claro">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2"/>
+            <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 13.5A8.2 8.2 0 1 1 10.5 4a6.4 6.4 0 0 0 9.5 9.5z"/>
+          </svg>
+        </button>
+
+        <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Abrir menú">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16"/>
+          </svg>
+        </button>
+
+        <a class="btn btn--primary header-cta" href="index.html#contacto">Hablemos</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="crumbs"><a href="index.html">inicio</a> / nosotros</p>
+        <p class="eyebrow">Índice</p>
+        <h1 class="title-1"><span class="grad-text">Información</span> de la empresa</h1>
+        <p class="lede" style="margin-top:1.2rem">
+          Todo lo que contamos sobre nosotros, en un solo lugar. Entra por donde quieras.
+        </p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap wrap--narrow">
+
+        <article class="window" data-reveal="1">
+          <div class="window__bar">
+            <span class="window__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="window__path">damaso@spd:~/spd$ ls -l</span>
+          </div>
+
+          <nav class="dir" aria-label="Páginas del sitio">
+            <a class="dir__row" href="index.html">
+              <span class="dir__icon" aria-hidden="true">▸</span>
+              <span class="dir__name">
+                index.html
+                <span class="dir__desc">Página principal: servicios, tecnologías y contacto</span>
+              </span>
+              <span class="dir__size">principal</span>
+            </a>
+
+            <a class="dir__row" href="valores.html">
+              <span class="dir__icon" aria-hidden="true">▸</span>
+              <span class="dir__name">
+                valores.html
+                <span class="dir__desc">Las cinco ideas que no negociamos</span>
+              </span>
+              <span class="dir__size">5 valores</span>
+            </a>
+
+            <a class="dir__row" href="mision.html">
+              <span class="dir__icon" aria-hidden="true">▸</span>
+              <span class="dir__name">
+                mision.html
+                <span class="dir__desc">A qué nos comprometemos con cada cliente</span>
+              </span>
+              <span class="dir__size">compromiso</span>
+            </a>
+
+            <a class="dir__row" href="vision.html">
+              <span class="dir__icon" aria-hidden="true">▸</span>
+              <span class="dir__name">
+                vision.html
+                <span class="dir__desc">Hacia dónde va el estudio</span>
+              </span>
+              <span class="dir__size">a futuro</span>
+            </a>
+
+            <a class="dir__row" href="index.html#contacto">
+              <span class="dir__icon" aria-hidden="true">▸</span>
+              <span class="dir__name">
+                contacto
+                <span class="dir__desc">WhatsApp, correo y Telegram</span>
+              </span>
+              <span class="dir__size">3 vías</span>
+            </a>
+          </nav>
+        </article>
+
+        <p class="text-muted" style="margin-top:1.6rem;font-family:var(--font-mono);font-size:var(--fs-xs)">
+          5 elementos · última actualización 2026
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <span class="brand__mark">SPD</span>
+            <span class="brand__word">CodeDesign</span>
+          </a>
+          <p class="footer-about">
+            Servicio de Programación y Diseño. Estudio familiar dedicado a la web y a la
+            programación de sistemas, fundado por Dámaso Figueredo.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col__title">Sitio</p>
+          <nav class="footer-links" aria-label="Enlaces del sitio">
+            <a href="index.html">Inicio</a>
+            <a href="paginas.html">Información</a>
+            <a href="valores.html">Valores</a>
+            <a href="mision.html">Misión</a>
+            <a href="vision.html">Visión</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col__title">Contacto</p>
+          <nav class="footer-links" aria-label="Datos de contacto">
+            <a href="tel:+573128137199">+57 312 813 7199</a>
+            <a href="mailto:servicioprogramaciondiseno@gmail.com">Correo electrónico</a>
+            <a href="https://t.me/Damaso_Figueredo" target="_blank" rel="noopener">Telegram</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> SPD. Todos los derechos reservados.</span>
+        <span>Hecho en Colombia</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
