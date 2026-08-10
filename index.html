@@ -21,12 +21,9 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Aplica el tema antes de pintar, para que no parpadee al cargar. -->
   <script>
     (function () {
       document.documentElement.classList.add('js');
-      // El modo oscuro es el de la marca. El claro solo aparece si la
-      // persona lo elige con el botón, y entonces se recuerda.
       var theme = 'dark';
       try {
         var saved = localStorage.getItem('spd-theme');
@@ -40,7 +37,6 @@
 <body>
   <a class="skip-link" href="#contenido">Ir al contenido</a>
 
-  <!-- ===================================================== CABECERA ===== -->
   <header class="site-header">
     <div class="wrap site-header__inner">
       <a class="brand" href="index.html">
@@ -80,7 +76,6 @@
 
   <main id="contenido">
 
-    <!-- ======================================================== HERO ===== -->
     <section class="hero">
       <div class="wrap hero__grid">
         <div data-reveal="1">
@@ -120,7 +115,6 @@
       </div>
     </section>
 
-    <!-- ==================================================== SERVICIOS ===== -->
     <section class="band band--alt" id="servicios">
       <div class="wrap">
         <div class="section-head" data-reveal="1">
@@ -171,7 +165,6 @@
                 <li>Scripts en Python, Bash y PowerShell</li>
                 <li>Herramientas de línea de comandos a la medida</li>
                 <li>Respaldos, reportes y tareas programadas</li>
-                <li>Configuración y ajustes de seguridad del servidor</li>
               </ul>
             </div>
           </article>
@@ -199,7 +192,6 @@
       </div>
     </section>
 
-    <!-- ====================================================== PROCESO ===== -->
     <section class="process">
       <div class="wrap" data-reveal="1">
         <p class="eyebrow">Cómo trabajamos</p>
@@ -223,7 +215,6 @@
       </div>
     </section>
 
-    <!-- ================================================= TECNOLOGÍAS ===== -->
     <section class="band tech" id="tecnologias">
       <div class="wrap">
         <div class="section-head" data-reveal="1">
@@ -249,7 +240,7 @@
           <div class="tech-group">
             <p class="tech-group__label">Sistemas</p>
             <div class="chips">
-              <span class="chip">Python</span>
+              <span class="chip">CMD</span>
               <span class="chip">Bash</span>
               <span class="chip">PowerShell</span>
               <span class="chip">Linux</span>
@@ -269,7 +260,6 @@
       </div>
     </section>
 
-    <!-- ==================================================== PRINCIPIOS ===== -->
     <section class="band band--alt">
       <div class="wrap">
         <div class="section-head" data-reveal="1">
@@ -308,7 +298,6 @@
       </div>
     </section>
 
-    <!-- ===================================================== CONTACTO ===== -->
     <section class="band contact" id="contacto">
       <div class="wrap">
         <div class="section-head" data-reveal="1">
@@ -361,7 +350,6 @@
 
   </main>
 
-  <!-- ======================================================== PIE ======== -->
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-grid">
@@ -371,7 +359,7 @@
             <span class="brand__word">CodeDesign</span>
           </a>
           <p class="footer-about">
-            Servicio de Programación y Diseño. Estudio familiar dedicado a la web y a la
+            Servicio de Programación y Diseño. Estudio familiar-cooperativo dedicado a la web y a la
             programación de sistemas, fundado por Dámaso Figueredo.
           </p>
         </div>
