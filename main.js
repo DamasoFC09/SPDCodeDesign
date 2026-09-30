@@ -1,13 +1,3 @@
-/* ============================================================================
-   SPD CodeDesign — Comportamiento del sitio
-   Sin librerías ni dependencias externas.
-   ---------------------------------------------------------------------------
-   1. Tema claro / oscuro
-   2. Menú móvil
-   3. Apariciones al hacer scroll
-   4. Terminal del inicio
-   5. Año del pie de página
-   ========================================================================== */
 
 (function () {
   'use strict';
@@ -15,11 +5,6 @@
   var root = document.documentElement;
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ------------------------------------------------------------------------
-     1. Tema claro / oscuro
-     El tema inicial ya se aplicó con el script en línea del <head> para que
-     la página nunca aparezca con el color equivocado durante un instante.
-     ---------------------------------------------------------------------- */
 
   var themeBtn = document.querySelector('[data-theme-toggle]');
 
@@ -34,14 +19,10 @@
       try {
         localStorage.setItem('spd-theme', next);
       } catch (e) {
-        /* Almacenamiento no disponible: el tema dura solo esta visita. */
       }
     });
   }
 
-  /* ------------------------------------------------------------------------
-     2. Menú móvil
-     ---------------------------------------------------------------------- */
 
   var navToggle = document.querySelector('[data-nav-toggle]');
   var nav = document.querySelector('[data-nav]');
@@ -69,11 +50,6 @@
     });
   }
 
-  /* ------------------------------------------------------------------------
-     3. Apariciones al hacer scroll
-     IntersectionObserver en lugar de escuchar el evento scroll: el navegador
-     avisa cuando el elemento entra en pantalla, sin trabajo en cada píxel.
-     ---------------------------------------------------------------------- */
 
   var revealables = document.querySelectorAll('[data-reveal]');
 
@@ -101,11 +77,6 @@
     }
   }
 
-  /* ------------------------------------------------------------------------
-     4. Terminal del inicio
-     Un único momento animado en toda la página: la terminal se escribe sola
-     al cargar. Todo lo demás se queda quieto.
-     ---------------------------------------------------------------------- */
 
   var terminal = document.querySelector('[data-terminal]');
 
@@ -143,7 +114,6 @@
       return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
     }
 
-    /* Sin animación: se pinta el resultado final de una vez. */
     function renderInstantly() {
       buffer = script
         .map(function (line) {
@@ -193,8 +163,6 @@
         return;
       }
 
-      /* Los comandos se escriben carácter por carácter; las respuestas no,
-         porque una máquina no teclea sus propias salidas. */
       var typed = 0;
       buffer += prompt;
 
@@ -223,9 +191,6 @@
     }
   }
 
-  /* ------------------------------------------------------------------------
-     5. Año del pie de página
-     ---------------------------------------------------------------------- */
 
   var yearSlot = document.querySelector('[data-year]');
   if (yearSlot) {
